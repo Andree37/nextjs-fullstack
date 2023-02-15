@@ -1,6 +1,6 @@
-import GlassPane from "../../../components/GlassPane";
+import GlassPane from "../../components/GlassPane";
 import {ReactNode} from "react";
-import '../../../styles/global.css'
+import '../../styles/global.css'
 
 export default function AuthRootLayout({children}: { children: ReactNode }) {
     return (
