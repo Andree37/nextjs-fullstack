@@ -43,7 +43,7 @@ const buttonClasses = cva([
     });
 
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement>, VariantProps<typeof buttonClasses> {
-    type: 'submit' | 'reset' | 'button' | undefined
+    type?: 'submit' | 'reset' | 'button' | undefined
 }
 
 const Button: FC<ButtonProps> = ({children, intent, size, className, ...props}) => {

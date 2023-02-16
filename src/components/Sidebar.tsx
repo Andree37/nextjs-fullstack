@@ -15,7 +15,7 @@ const links: LinkOptions[] = [
 
 const Sidebar = () => {
     return (
-        <Card className="h-full w-40 flex items-center justify-between flex-wrap">
+        <Card className="min-h-full w-40 flex items-center justify-between flex-wrap">
             {links.map((link) => (
                 <SidebarLink link={link}/>
             ))}
