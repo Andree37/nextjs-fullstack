@@ -3,6 +3,11 @@ import {FC} from "react";
 
 type InputProps = {
     className: string
+    required?: boolean
+    placeholder?: string
+    value?: string
+    onChange?: (e: { target: { value: any; }; }) => void
+    type?: string
 }
 
 const Input: FC<InputProps> = ({className, ...props}) => {
