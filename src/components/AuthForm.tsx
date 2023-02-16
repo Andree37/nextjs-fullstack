@@ -18,7 +18,7 @@ const registerContent = {
 }
 
 const signinContent = {
-    linkUrl: '/signin',
+    linkUrl: '/register',
     linkText: "Don't have an account",
     header: "Welcome back",
     subHeader: "Enter you credentials to access you account",
