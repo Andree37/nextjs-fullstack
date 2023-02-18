@@ -1,16 +1,15 @@
 import Greetings from "@/components/Greetings";
 import {Suspense} from "react";
 import GreetingsSkeleton from "@/components/GreetingsSkeleton";
-import {delay} from "@/lib/async";
 import {getUserFromCookie} from "@/lib/auth";
 import {cookies} from "next/headers";
 import {db} from "@/lib/db";
 import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
+import TasksCard from "@/components/TasksCard";
 
 
 const getData = async () => {
-    await delay(2000) //faking the api route
     const user = await getUserFromCookie(cookies())
 
     return db.project.findMany({
@@ -46,7 +45,10 @@ export default async function Home() {
                     <div className="w-1/3 p-3">{/* new project here */}</div>
                 </div>
                 <div className="mt-6 flex-2 grow w-full flex">
-                    <div className="w-full">{/* tasks here */}</div>
+                    <div className="w-full">
+                        {/* @ts-expect-error Server Component */}
+                        <TasksCard title="Tasks"/>
+                    </div>
                 </div>
             </div>
         </div>
